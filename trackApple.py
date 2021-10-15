@@ -3,7 +3,7 @@ import json
 from datetime import datetime
 import time
 import os
-from win10toast import ToastNotifier
+#from win10toast import ToastNotifier
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.util.retry import Retry
 
@@ -24,7 +24,7 @@ ONE_MIN = 60
 
 timestamp = ''
 
-toast = ToastNotifier()
+#toast = ToastNotifier()
 
 def trackStock():
     while(True):
