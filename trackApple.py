@@ -32,12 +32,14 @@ def trackStock():
         storeIdentifier = 'R301'
         product = ''
 
-        proMax128_SB = 'MLJ73VC/A'
-        pro128_SB = 'MLUK3VC/A'
-        pro256_SB = 'MLUU3VC/A'
-        proMax256_G = 'MLJ83VC/A'
+        iphone_13proMax_128_SB = 'MLJ73VC/A'
+        iphone_13pro128_SB = 'MLUK3VC/A'
+        iphone_13pro256_SB = 'MLUU3VC/A'
+        iphone_13proMax256_G = 'MLJ83VC/A'
 
-        productList = [proMax128_SB, pro128_SB]
+        iphone_13_128_pink = 'MLNE3VC/A'
+
+        productList = [iphone_13_128_pink]
         
         for p in productList:
             print("Attempting product", p)
@@ -79,7 +81,7 @@ def trackStock():
                         print(style.GREEN + str(timestamp), "MODEL IS IN STOCK" + style.RESET)
                         # toast.show_toast("Stock available","Tracked product is in stock",duration=20)
 
-                    print("Product ID:", stock, "Name:", availableStock[stock]['storePickupProductTitle'])
+                    print("Product ID:", stock, "Name:", availableStock[stock]['messageTypes']['compact']['storePickupProductTitle'])
                     print(style.RED + availableStock[stock]['pickupSearchQuote'], "at", store['storeName'], "\n"+style.RESET)
 
                 if not availableStock:
